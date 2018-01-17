@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2018 | YB&#39;s World</title>
+    <title>RxJava初见 | YB&#39;s World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="算法|时尚程序猿|大数据|优雅代码爱好者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YB&#39;s World">
-<meta property="og:url" content="https://ybuntil.github.io/archives/2018/index.html">
+    <meta name="description" content="最近周围提到要进行响应化编程改造，一直知道有RxJava这个东西，但一直没有在实际中去使用，这次正好借着这个机会，准备改造现在参与的一个项目。这篇文章并不会对于RxJava的基本原理进行说明，只是讲一下我想用这个东西会遇到的一些问题和临时解决方案，具体的RxJava的原理和知识会在之后的文章中系统论述(PS:现在中文社">
+<meta name="keywords" content="RxJava,响应式编程,函数式编程,Reactive Programing,Functional Programing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RxJava初见">
+<meta property="og:url" content="https://ybuntil.github.io/2018/01/17/RxJava初见/index.html">
 <meta property="og:site_name" content="YB&#39;s World">
-<meta property="og:description" content="算法|时尚程序猿|大数据|优雅代码爱好者">
+<meta property="og:description" content="最近周围提到要进行响应化编程改造，一直知道有RxJava这个东西，但一直没有在实际中去使用，这次正好借着这个机会，准备改造现在参与的一个项目。这篇文章并不会对于RxJava的基本原理进行说明，只是讲一下我想用这个东西会遇到的一些问题和临时解决方案，具体的RxJava的原理和知识会在之后的文章中系统论述(PS:现在中文社区里关于RxJava的东西真的有点low，完全不系统，希望可以把这一块系统化梳理">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-17T03:20:04.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YB&#39;s World">
-<meta name="twitter:description" content="算法|时尚程序猿|大数据|优雅代码爱好者">
+<meta name="twitter:title" content="RxJava初见">
+<meta name="twitter:description" content="最近周围提到要进行响应化编程改造，一直知道有RxJava这个东西，但一直没有在实际中去使用，这次正好借着这个机会，准备改造现在参与的一个项目。这篇文章并不会对于RxJava的基本原理进行说明，只是讲一下我想用这个东西会遇到的一些问题和临时解决方案，具体的RxJava的原理和知识会在之后的文章中系统论述(PS:现在中文社区里关于RxJava的东西真的有点low，完全不系统，希望可以把这一块系统化梳理">
     
 
     
@@ -209,25 +211,21 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2018</h1>
-            </div>
+            <section id="main"><article id="post-RxJava初见" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/01/17/RxJava初见/">RxJava初见</a>
+        <h1 class="article-title" itemprop="name">
+            RxJava初见
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2018/01/17/RxJava初见/">
@@ -236,95 +234,133 @@
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/RxJava/">RxJava</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Functional-Programing/">Functional Programing</a>, <a class="tag-link" href="/tags/Reactive-Programing/">Reactive Programing</a>, <a class="tag-link" href="/tags/RxJava/">RxJava</a>, <a class="tag-link" href="/tags/函数式编程/">函数式编程</a>, <a class="tag-link" href="/tags/响应式编程/">响应式编程</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/01/16/2018-我的计划/">2018-我的目标</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>最近周围提到要进行响应化编程改造，一直知道有RxJava这个东西，但一直没有在实际中去使用，这次正好借着这个机会，准备改造现在参与的一个项目。<br>这篇文章并不会对于RxJava的基本原理进行说明，只是讲一下我想用这个东西会遇到的一些问题和临时解决方案，具体的RxJava的原理和知识会在之后的文章中系统论述(PS:现在中文社区里关于RxJava的东西真的有点low，完全不系统，希望可以把这一块系统化梳理一下)</p>
+<ol>
+<li>RxJava到底解决什么问题？</li>
+<li>RxJava2和RxJava1的区别？</li>
+<li>RxJava是如何异步的呢？</li>
+</ol>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/16/2018-我的计划/">
-            <time datetime="2018-01-16T08:20:49.000Z" itemprop="datePublished">2018-01-16</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/个人感悟/">个人感悟</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/个人/">个人</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/01/16/FirstPage/">FirstPage</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/01/16/FirstPage/">
-            <time datetime="2018-01-16T02:17:34.000Z" itemprop="datePublished">2018-01-16</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/first/">first</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/first/">first</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
 </div>
+
+    <a data-url="https://ybuntil.github.io/2018/01/17/RxJava初见/" data-id="cjcii1qlm0000btug793rh8lc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/01/16/2018-我的计划/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">2018-我的目标</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
 </section>
             
                 

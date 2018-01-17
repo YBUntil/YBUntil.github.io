@@ -157,11 +157,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
+                3
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                2
+                7
                 <span>标签</span>
             </div>
         </div>
@@ -210,6 +210,141 @@
 
             
             <section id="main">
+    <article id="post-RxJava初见" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/01/17/RxJava初见/">RxJava初见</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/01/17/RxJava初见/">
+            <time datetime="2018-01-17T03:14:34.000Z" itemprop="datePublished">2018-01-17</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/RxJava/">RxJava</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Functional-Programing/">Functional Programing</a>, <a class="tag-link" href="/tags/Reactive-Programing/">Reactive Programing</a>, <a class="tag-link" href="/tags/RxJava/">RxJava</a>, <a class="tag-link" href="/tags/函数式编程/">函数式编程</a>, <a class="tag-link" href="/tags/响应式编程/">响应式编程</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>最近周围提到要进行响应化编程改造，一直知道有RxJava这个东西，但一直没有在实际中去使用，这次正好借着这个机会，准备改造现在参与的一个项目。<br>这篇文章并不会对于RxJava的基本原理进行说明，只是讲一下我想用这个东西会遇到的一些问题和临时解决方案，具体的RxJava的原理和知识会在之后的文章中系统论述(PS:现在中文社区里关于RxJava的东西真的有点low，完全不系统，希望可以把这一块系统化梳理一下)</p>
+<ol>
+<li>RxJava到底解决什么问题？</li>
+<li>RxJava2和RxJava1的区别？</li>
+<li>RxJava是如何异步的呢？</li>
+</ol>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://ybuntil.github.io/2018/01/17/RxJava初见/" data-id="cjcii1qlm0000btug793rh8lc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-2018-我的计划" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -269,7 +404,7 @@
 
 </div>
 
-    <a data-url="https://ybuntil.github.io/2018/01/16/2018-我的计划/" data-id="cjchfktqz0000qoug7pxrat3r" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://ybuntil.github.io/2018/01/16/2018-我的计划/" data-id="cjcii1qmt000fbtugzcdttgdj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -398,7 +533,7 @@
 
 </div>
 
-    <a data-url="https://ybuntil.github.io/2018/01/16/FirstPage/" data-id="cjchfktrb0002qoug9rbdmkhl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://ybuntil.github.io/2018/01/16/FirstPage/" data-id="cjcii1qmp000dbtuguacennel" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -487,6 +622,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/01/17/RxJava初见/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/RxJava/">RxJava</a></p>
+                            <p class="item-title"><a href="/2018/01/17/RxJava初见/" class="title">RxJava初见</a></p>
+                            <p class="item-date"><time datetime="2018-01-17T03:14:34.000Z" itemprop="datePublished">2018-01-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/01/16/2018-我的计划/" class="thumbnail">
     
     
@@ -531,7 +685,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/first/">first</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人感悟/">个人感悟</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/RxJava/">RxJava</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/first/">first</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人感悟/">个人感悟</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -540,7 +694,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -549,7 +703,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/">first</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人/">个人</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functional-Programing/">Functional Programing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Reactive-Programing/">Reactive Programing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RxJava/">RxJava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/">first</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人/">个人</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数式编程/">函数式编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/响应式编程/">响应式编程</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -558,7 +712,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a>
+            <a href="/tags/Functional-Programing/" style="font-size: 10px;">Functional Programing</a> <a href="/tags/Reactive-Programing/" style="font-size: 10px;">Reactive Programing</a> <a href="/tags/RxJava/" style="font-size: 10px;">RxJava</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/函数式编程/" style="font-size: 10px;">函数式编程</a> <a href="/tags/响应式编程/" style="font-size: 10px;">响应式编程</a>
         </div>
     </div>
 
